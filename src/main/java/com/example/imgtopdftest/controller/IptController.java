@@ -1,34 +1,24 @@
 package com.example.imgtopdftest.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.pdmodel.PDPage;
-import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-
-import java.io.IOException;
 
 @Controller
 @RequiredArgsConstructor
 public class IptController {
 
-    @GetMapping("/test")
-    public String testPage(){
+    /*인덱스 페이지 (표지 선택)*/
+    @GetMapping(value = {"/index", "/"})
+    public String indexPage(){
 
-        PDDocument document = new PDDocument();
-        PDPage page = new PDPage(PDRectangle.A4);
-        document.addPage(page);
+        return "step-01";
+    }
 
-        try {
-            document.save("D:\\temp\\test.pdf");
-            document.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    @GetMapping("/step2")
+    public String coverPage(){
 
-
-        return "test";
+        return "step-02";
     }
 
 
