@@ -111,7 +111,10 @@
     <script type="text/javascript">
         $(document).ready(function (){
             $("#moveNextBtn").on("click", function (){
-               console.log($("input[name=coverSelect]:checked").val());
+                console.log($("input[name=coverSelect]:checked").val());
+                if(confirm("PDF 생성 경로에 선택된 배경 이미지로 신규 파일이 생성됩니다.")){
+                    //선택 PDF 번호를 파라미터로 전송 (To PDFController)
+                }
             });
         });
     </script>
