@@ -21,6 +21,11 @@ public class IptController {
         return "step-02";
     }
 
+    @GetMapping("/step3")
+    public String pdfPage(){
+        return "step-03";
+    }
+
 
 }
 
