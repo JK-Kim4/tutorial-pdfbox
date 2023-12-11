@@ -18,40 +18,53 @@
         }
 
         .container {
-            border: 4px solid red;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .book-info{
+            margin: 1cm;
+            border: 2px solid;
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
             width: 31cm;
-            min-height: 21.4cm;
+            min-height: 22cm;
         }
 
-        .side01 {
+        .user-input {
+
+        }
+
+        .front {
             width: 15cm;
-            min-height: 21.4cm;
-            background-color: #4e555b;
+            min-height: 22cm;
+            background-image: url("../images/bg-sample-01.jpg");
         }
 
-        .side02 {
+        .edge {
             width: 1cm;
-            min-height: 21.4cm;
-            background-color: #007bff;
+            min-height: 22cm;
         }
 
-        .side03 {
+        .back {
             width: 15cm;
-            min-height: 21.4cm;
-            background-color: #4e555b;
+            min-height: 22cm;
+            background-image: url("../images/bg-sample-02.jpg");
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="side01"></div>
-        <div class="side02"></div>
-        <div class="side03"></div>
+        <div class="book-info">
+            <div class="back"></div>
+            <div class="edge"></div>
+            <div class="front"></div>
+        </div>
+        <div class="user-input">
+            <h1>input area</h1>
+        </div>
     </div>
-
 </body>
 <script>
 
@@ -61,6 +74,5 @@
         ctx.fillText("Hello world", 10, 50);
     }
 
-    draw();
 </script>
 </html>
